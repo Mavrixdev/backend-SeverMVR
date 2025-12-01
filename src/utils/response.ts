@@ -1,6 +1,8 @@
 import { Response } from 'express';
 import { ApiResponse, ErrorResponse } from '../types';
 
+const CREATOR = "https://facebook.com/ntmdz08/";
+
 export class ResponseHandler {
   static success<T>(
     res: Response,
@@ -8,10 +10,11 @@ export class ResponseHandler {
     message: string = 'Success',
     statusCode: number = 200
   ): Response {
-    const response: ApiResponse<T> = {
+    const response: ApiResponse<T> & { cre: string } = {
       success: true,
       message,
       data,
+      cre: CREATOR,
     };
     return res.status(statusCode).json(response);
   }
@@ -22,10 +25,11 @@ export class ResponseHandler {
     statusCode: number = 500,
     error?: string
   ): Response {
-    const response: ErrorResponse = {
+    const response: ErrorResponse & { cre: string } = {
       success: false,
       message,
       error,
+      cre: CREATOR,
     };
     return res.status(statusCode).json(response);
   }
