@@ -1,0 +1,191 @@
+[
+  {
+    "method": "GET",
+    "path": "/gioithieu",
+    "title": "Giới Thiệu",
+    "description": "Lấy thông tin giới thiệu về tổ chức",
+    "exampleResponse": {
+      "success": true,
+      "message": "Lấy thông tin giới thiệu cá nhân thành công",
+      "data": {
+        "avatar": "https://i.imgur.com/your-avatar.png",
+        "name": "Nguyễn Thạc Mậu",
+        "bio": "Lập trình viên, yêu thích công nghệ, thiết kế và sáng tạo.",
+        "contact": {
+          "email": "ntmdz@gmail.com",
+          "phone": "0935877156",
+          "facebook": "https://facebook.com/ntmdz08",
+          "github": "https://github.com/mavrixdev",
+          "zalo": "https://zalo.me/+84935877156"
+        },
+        "skills": ["Node.js", "React", "UI/UX", "Animation", "TypeScript"],
+        "location": "Đắk Lắk, Việt Nam",
+        "website": "https://mavrixdev.vercel.app/"
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/tkb",
+    "title": "Thời Khóa Biểu",
+    "description": "Lấy thông tin thời khóa biểu mới nhất từ hệ thống giáo dục",
+    "exampleResponse": {
+      "success": true,
+      "message": "Lấy thời khóa biểu thành công",
+      "data": { "title": "Thời khóa biểu mẫu", "description": "Mô tả ngắn", "link": "" }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/news",
+    "title": "News",
+    "description": "Lấy tin tức mới nhất",
+    "exampleResponse": {
+      "success": true,
+      "message": "Lấy tin tức thành công",
+      "data": []
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/kehoach",
+    "title": "Lịch Kế Hoạch",
+    "description": "Lấy danh sách lịch kế hoạch",
+    "exampleResponse": {
+      "success": true,
+      "message": "Lấy lịch kế hoạch thành công",
+      "data": []
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/thongbao",
+    "title": "Thông Báo",
+    "description": "Lấy danh sách thông báo từ trang chủ",
+    "exampleResponse": {
+      "success": true,
+      "message": "Lấy thông báo thành công",
+      "data": []
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/luongtruycap",
+    "title": "Lượng Truy Cập",
+    "description": "Lấy thống kê lượng truy cập website",
+    "exampleResponse": {
+      "success": true,
+      "message": "Lấy lượng truy cập thành công",
+      "data": {
+        "totalVisits": "11,054",
+        "todayVisits": "247",
+        "thisWeekVisits": "500",
+        "yesterdayVisits": "68",
+        "onlineUsers": null
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/albums",
+    "title": "Album",
+    "description": "Lấy danh sách album hình ảnh",
+    "exampleResponse": {
+      "success": true,
+      "message": "Lấy album thành công",
+      "data": [
+        {
+          "title": "Tên album",
+          "link": "https://ttgdnn-gdtxcumgar.edu.vn/album-link",
+          "image": "https://ttgdnn-gdtxcumgar.edu.vn/image.jpg",
+          "description": "Mô tả album"
+        }
+      ]
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/sysinfo",
+    "title": "System Information",
+    "description": "Lấy thông tin hệ thống bao gồm OS, CPU, RAM, Disk, Network, Uptime",
+    "exampleResponse": {
+      "success": true,
+      "message": "System information retrieved successfully",
+      "data": {
+        "os": {
+          "platform": "win32",
+          "arch": "x64",
+          "release": "10.0.19045",
+          "version": "win32 10.0.19045",
+          "hostname": "MYCOMPUTER",
+          "uptime": 86400,
+          "uptimeFormatted": "1d"
+        },
+        "cpu": {
+          "count": 8,
+          "model": "Intel(R) Core(TM) i7-8700K CPU @ 3.70GHz",
+          "speed": 3700,
+          "usage": 12.5
+        },
+        "memory": {
+          "total": 17179869184,
+          "totalGb": 16,
+          "used": 8589934592,
+          "usedGb": 8,
+          "free": 8589934592,
+          "freeGb": 8,
+          "usagePercent": 50
+        },
+        "load": {
+          "avg1": 0.25,
+          "avg5": 0.3,
+          "avg15": 0.35
+        },
+        "network": {
+          "interfaces": 2,
+          "addresses": [
+            {
+              "family": "IPv4",
+              "address": "192.168.1.100",
+              "interface": "Ethernet"
+            }
+          ]
+        },
+        "timestamp": "2025-11-17T10:30:00.000Z"
+      }
+    }
+  },
+  {
+    "method": "GET",
+    "path": "/api/web/v1/calendar/2/events",
+    "title": "Calendar Events",
+    "description": "Lấy danh sách sự kiện lịch từ API am-lich.com",
+    "exampleResponse": {
+      "success": true,
+      "message": "Lấy dữ liệu sự kiện lịch thành công",
+      "data": {
+        "result": [
+          {
+            "id": 238,
+            "calendarId": 2,
+            "ownerId": 1,
+            "startHour": 0,
+            "startMinute": 0,
+            "lasting": 0,
+            "dateType": 0,
+            "period": 3,
+            "location": "",
+            "title": "Tết Dương Lịch",
+            "description": "Ngày lễ Tết Quốc tế của hầu hết các quốc gia.",
+            "notification": 0,
+            "privacy": 1,
+            "startDate": "2024-12-02",
+            "date": "2024-12-02",
+            "dayKey": "2024-12-02"
+          }
+        ],
+        "status": "ok"
+      }
+    }
+  }
+]
