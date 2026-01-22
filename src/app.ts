@@ -23,10 +23,10 @@ class App {
     this.app.use(helmet());
 
     // CORS configuration
+    // CORS PUBLIC
     this.app.use(
       cors({
-        origin: config.corsOrigin,
-        credentials: true,
+        origin: "*",
         methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
         allowedHeaders: ['Content-Type', 'Authorization'],
       })
@@ -68,3 +68,4 @@ class App {
 }
 
 export default new App().app;
+
